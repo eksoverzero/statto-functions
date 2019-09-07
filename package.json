@@ -1,0 +1,25 @@
+{
+  "name": "statto-functions",
+  "version": "1.0.0",
+  "description": "Serverless functions for Statto",
+  "main": "handler.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eksoverzero/statto-functions.git"
+  },
+  "author": "Steven Eksteen <eksoverzero.zero@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/eksoverzero/statto-functions/issues"
+  },
+  "homepage": "https://github.com/eksoverzero/statto-functions#readme",
+  "dependencies": {
+    "axios": "^0.19.0"
+  },
+  "devDependencies": {
+    "serverless-offline": "^5.10.1"
+  }
+}
