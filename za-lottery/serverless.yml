@@ -1,3 +1,8 @@
+# https://serverless.com/framework/docs/providers/aws/events/sqs/
+# https://serverless.com/blog/aws-lambda-sqs-serverless-integration/
+# https://dev.to/piczmar_0/aws-lambda-sqs-events-with-serverless-framework-oj6
+# https://dev.to/dvddpl/where-do-you-keep-credentials-for-your-lambda-functions-5dno
+
 service: za-lottery
 
 plugins:
@@ -7,7 +12,7 @@ provider:
   name: aws
   runtime: nodejs10.x
 
-  stage: dev
+  stage: development
   region: eu-west-1
 
 # you can add statements to the Lambda function's IAM Role here
@@ -41,9 +46,9 @@ provider:
 
 functions:
   allDraws:
-    handler: handler.list
+    handler: handler.fetch
   singleDraw:
-    handler: handler.get
+    handler: handler.pull
 #    The following are a few example events you can configure
 #    NOTE: Please make sure to change your handler code to work with those events
 #    Check the event documentation for details

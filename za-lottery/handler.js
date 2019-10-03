@@ -2,14 +2,15 @@
 
 // const sqs = require('../lib/aws/sqs');
 const request = require('../lib/request/ithuba');
+const competition = require('./config/competition');
 
-module.exports.list = async (event, context) => {
+module.exports.fetch = async (event, context) => {
   const results = await request.allResults('LOTTO');
 
   console.log(results);
 };
 
-module.exports.get = async (event, context) => {
+module.exports.pull = async (event, context) => {
   const draw = context.draw;
   const response = await request.singleResult(context.draw, 'LOTTO');
   const drawDetails = response.data.drawDetails;
@@ -19,6 +20,7 @@ module.exports.get = async (event, context) => {
     date: drawDetails.drawDate,
     machine: drawDetails.drawMachine,
     ball_set: drawDetails.ballSet,
+    competition: competition,
     results: [{
       name: 'Ball 1',
       value: parseInt(drawDetails.ball1),
