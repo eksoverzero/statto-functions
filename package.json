@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/eksoverzero/statto-functions#readme",
   "dependencies": {
-    "axios": "^0.19.0"
+    "axios": "^0.21.1"
   },
   "devDependencies": {
     "serverless-offline": "^5.10.1"
